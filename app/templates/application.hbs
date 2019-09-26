@@ -1,5 +1,9 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="ui basic center aligned segment">
+  {{#each customers as |customer|}}
+    <div class="ui huge label">
+      {{customer}}
+    </div> <br> <br>
+  {{/each}}
+  <button class="ui primary icon button" {{action "add"}}> <i class="ui plus icon"></i> </button>
+	<button class="ui primary icon button" {{action "remove"}}><i class="ui minus icon"></i></button>
+</div>
